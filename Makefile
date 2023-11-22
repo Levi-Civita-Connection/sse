@@ -13,7 +13,7 @@ test:
 
 deps:
 	go get -u gopkg.in/cenkalti/backoff.v1
-	go get -u github.com/golang/lint/golint
+	go get -u golang.org/x/lint/golint
 	go get -u github.com/stretchr/testify
 
 clean:
