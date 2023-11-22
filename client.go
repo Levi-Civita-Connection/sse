@@ -55,6 +55,7 @@ type Client struct {
 	mu                sync.Mutex
 	EncodingBase64    bool
 	Connected         bool
+	ExtData           interface{}
 }
 
 // NewClient creates a new client
@@ -359,6 +360,7 @@ func (c *Client) processEvent(msg []byte) (event *Event, err error) {
 		}
 		e.Data = buf[:n]
 	}
+	e.ExtData = c.ExtData
 	return &e, err
 }
 

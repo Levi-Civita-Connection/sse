@@ -20,6 +20,7 @@ type Event struct {
 	Event     []byte
 	Retry     []byte
 	Comment   []byte
+	ExtData   interface{}
 }
 
 func (e *Event) hasContent() bool {
